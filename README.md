@@ -27,7 +27,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
 ***
 
-### Массив байт в vector\<BYTE\>
+### Массив байт в вектор байт
 ```cpp
 typedef unsigned char BYTE;
 BYTE bytes[2] = {0x0, 0x1};
@@ -37,7 +37,7 @@ const std::vector<BYTE> vectorBytes(bytes, bytes + sizeof(bytes));
 
 ***
 
-### Считать с файла vector\<BYTE\> 
+### Считать с файла вектор байт 
 ```cpp 	
 ifstream inputDll("C:\Library.dll", ios::binary);
 if (inputDll.is_open())
@@ -50,7 +50,7 @@ if (inputDll.is_open())
 
 ***
 
-### Записать в файл vector\<BYTE\>
+### Записать в файл вектор байт
 ```cpp
 ofstream outDll("C:\Library.dll", ios::out | ios::binary);
 outDll.write(reinterpret_cast<char*>(rawData.data()), rawData.size());
