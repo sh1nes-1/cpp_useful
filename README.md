@@ -60,7 +60,7 @@ outDll.close();
 
 ***
 
-### Xor шифрование массива байт
+### Xor шифрование вектора байт
 ```cpp
 std::wstring pass = L"password";
 std::vector<BYTE> rawResult;
