@@ -25,6 +25,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 }
 ```
 
+***
+
 ### Массив байт в vector\<BYTE\>
 ```cpp
 typedef unsigned char BYTE;
@@ -32,6 +34,8 @@ BYTE bytes[2] = {0x0, 0x1};
 
 const std::vector<BYTE> vectorBytes(bytes, bytes + sizeof(bytes));
 ```
+
+***
 
 ### Считать с файла vector\<BYTE\> 
 ```cpp 	
@@ -44,6 +48,8 @@ if (inputDll.is_open())
 ```
 [Подробнее на **StackOverflow**](https://stackoverflow.com/questions/15138353/how-to-read-a-binary-file-into-a-vector-of-unsigned-chars)
 
+***
+
 ### Записать в файл vector\<BYTE\>
 ```cpp
 ofstream outDll("C:\Library.dll", ios::out | ios::binary);
@@ -51,6 +57,8 @@ outDll.write(reinterpret_cast<char*>(rawData.data()), rawData.size());
 outDll.close();
 ```
 [Подробнее на **StackOverflow**](https://stackoverflow.com/questions/22662728/c-writing-to-file-vector-of-byte)
+
+***
 
 ### Xor шифрование массива байт
 ```cpp
